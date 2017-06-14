@@ -17,7 +17,7 @@ public class MusicManager : MonoBehaviour {
     void Start() {
         audioSource = GetComponent<AudioSource>();
     }
-
+    //Changing the Music
     private void OnLevelWasLoaded(int level)
     {
         
