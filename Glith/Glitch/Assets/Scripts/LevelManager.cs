@@ -6,16 +6,28 @@ using UnityEditor.SceneManagement;
 public class LevelManager : MonoBehaviour {
 
     public float LoadNextLevelTime;
+    public bool autoLoad;
 
 	void Start () {
-        Invoke("LoadNextLevel", LoadNextLevelTime);
-	}
+
+        if(autoLoad == true) { 
+            Invoke("LoadNextLevel", LoadNextLevelTime);
+        }
+
+
+    }
 
 
     public void LoadNextLevel()
     {
-        Application.LoadLevel(Application.loadedLevel + 1);
-        
+        //Obsolate Function
+        //Application.LoadLevel(Application.loadedLevel + 1);
+        EditorSceneManager.LoadScene(EditorSceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LoadLevelbyName(string name)
+    {
+        EditorSceneManager.LoadScene(name);
     }
 
 }
