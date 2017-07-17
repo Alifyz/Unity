@@ -42,6 +42,10 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public static void changeLevel(float volume)
+    {
+        GameObject.FindObjectOfType<AudioSource>().volume = volume;
+    }
     
     
 
