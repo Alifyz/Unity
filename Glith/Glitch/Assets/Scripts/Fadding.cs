@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Fadding : MonoBehaviour {
 
-   
     public float faddingTime = 2.0f;
     private Image fadeTexture;
     private Color currentColor = Color.black;

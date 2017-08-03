@@ -13,8 +13,7 @@ public class LevelManager : MonoBehaviour {
         if(autoLoad == true) { 
             Invoke("LoadNextLevel", LoadNextLevelTime);
         }
-
-
+			
     }
 
 
